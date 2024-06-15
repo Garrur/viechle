@@ -140,7 +140,7 @@ const Table = ({ filteredInventory }) => {
         </tbody>
       </table>
       <div
-        className="flex items-center justify-end pt-4"
+        className="flex items-center justify-end pt-4 gap-4"
         aria-label="Table navigation"
       >
         <div className="flex items-center">
@@ -150,7 +150,7 @@ const Table = ({ filteredInventory }) => {
           <select
             value={itemsPerPage}
             onChange={handleItemsPerPageChange}
-            className="mx-2 py-1 px-2 border border-gray-300 rounded"
+            className="mx-2 py-1 px-2  rounded"
           >
             {itemsPerPageOptions.map((option) => (
               <option key={option} value={option}>
@@ -160,11 +160,17 @@ const Table = ({ filteredInventory }) => {
           </select>
         </div>
 
+        <div className="flex items-center ">
+          <span className="text-sm text-gray-500">
+            Page {currentPage} of {totalPages}
+          </span>
+        </div>
+
         <ul className="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
           <li>
             <button
               onClick={handlePrevPage}
-              className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700"
+              className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white  rounded-s-lg hover:bg-gray-100 hover:text-gray-700"
               disabled={currentPage === 1}
             >
               <svg
@@ -186,7 +192,7 @@ const Table = ({ filteredInventory }) => {
           <li>
             <button
               onClick={handleNextPage}
-              className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700"
+              className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white  rounded-e-lg hover:bg-gray-100 hover:text-gray-700"
               disabled={currentPage === totalPages}
             >
               <svg
