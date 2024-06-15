@@ -5,6 +5,7 @@ import InventoryBarGraph from "../graph/InventoryBarGraph";
 import AverageBarGraph from "../graph/Average";
 import Filters from "./Filters"; // Import Filters component
 import Table from "./Table";
+import DealerSelector from "./selector";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -72,8 +73,9 @@ const Dashboard = () => {
       <div className="dashboard">
         <div className="flex justify-between items-center gap-4 w-1578 ">
           <h1 className="text-2xl font-bold ml-4 mt-4">Inventory</h1>
-
+            
           <div className="flex justify-end">
+          <DealerSelector />
             <Filters />
           </div>
         </div>
@@ -92,7 +94,7 @@ const Dashboard = () => {
                   <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-2xl hover:bg-gray-300">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                       {getUnitCount("new")}
-                      <div className="text-orange-500">New Units</div>
+                      <div className="text-orange-500"># New Units</div>
                     </h5>
                   </div>
                   <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-2xl hover:bg-gray-300">
