@@ -1,71 +1,58 @@
-Title
+DashBoard
 ===
-Abstract:xxx
-## Papar Information
-- Title:  `paper name`
-- Authors:  `A`,`B`,`C`
-- Preprint: [https://arxiv.org/abs/xx]()
-- Full-preprint: [paper position]()
-- Video: [video position]()
 
 ## Install & Dependence
-- python
-- pytorch
-- numpy
+- git clone  https://github.com/Garrur/viechle.git
+- cd Frontend
+```
+npm install
 
-## Dataset Preparation
-| Dataset | Download |
-| ---     | ---   |
-| dataset-A | [download]() |
-| dataset-B | [download]() |
-| dataset-C | [download]() |
+npm run dev
+``` 
+- cd seerver
+```
+npm install
+
+node server.js
+```
+
+## Used
+
+* React
+* Redux-Toolkit 
+* Express
+* Node
+* Tailwind CSS
+
+**For Graph Used :-** 
+- ChartJs Library
+
+
+### In seerver :-
+- Test the API with various query parameters to see the filtered results.
+
+**Fetch all inventory data:** http://localhost:5000/api/inventory
+
+**Filter by vehicle brand:**
+http://localhost:5000/api/inventory?brand=GMC
+
+**Filter by both brand and product type:**
+http://localhost:5000/api/inventory?brand=GMC&product_type=SUV
+   
+   
+
+
 
 ## Use
-- for train
+- for run frontend
   ```
-  python train.py
+  cd Frontend
+  npm run dev
   ```
-- for test
+- for server
   ```
-  python test.py
+  cd seerver
+  node server.js
   ```
-## Pretrained model
-| Model | Download |
-| ---     | ---   |
-| Model-1 | [download]() |
-| Model-2 | [download]() |
-| Model-3 | [download]() |
 
 
-## Directory Hierarchy
-```
-
-```
-## Code Details
-### Tested Platform
-- software
-  ```
-  OS: Debian unstable (May 2021), Ubuntu LTS
-  Python: 3.8.5 (anaconda)
-  PyTorch: 1.7.1, 1.8.1
-  ```
-- hardware
-  ```
-  CPU: Intel Xeon 6226R
-  GPU: Nvidia RTX3090 (24GB)
-  ```
-### Hyper parameters
-```
-```
-## References
-- [paper-1]()
-- [paper-2]()
-- [code-1](https://github.com)
-- [code-2](https://github.com)
-  
-## License
-
-## Citing
-If you use xxx,please use the following BibTeX entry.
-```
-```
